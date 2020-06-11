@@ -1,0 +1,217 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    transition: all 0.5s ease-in-out;
+}
+body{
+    overflow-x: hidden;
+
+}
+#navbar ul{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin-left: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100px;
+
+
+}
+li{
+    list-style: none;
+    
+    
+}
+li a{
+    color: azure;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 50px;
+}
+h1{
+    font-family:'Javanese Text Regular';
+    font-size: 0px;
+}
+img{
+    width: 100%;
+    /* margin-bottom: 4vh; */
+}
+
+img {
+    /* box-shadow: 0 0 7px #8693ab; */
+}
+footer{
+    background-color: #16171b;
+    height: 10VH;
+    display: flex  ;
+    justify-content: center;
+}
+footer ul{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#navbar{
+    position: fixed;
+    background-color: #16171b;
+    width: 100vw;
+    height: 10vh;
+    z-index: 10;
+}
+#navbar::before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10%;
+    height: 150%;
+    background-color:#637074;
+    border-radius:0 0 10px 10px;
+}
+#welcome-section{
+    position: relative;
+    background-color: #212227;
+    width: 100vw;
+    height: 100vh;
+    background:#637074;
+    animation: abb 5s ease-in-out 0s infinite alternate;
+    
+}
+@keyframes abb{
+    0%{
+        background: #212227;
+    }
+    100%{
+         background:#32333a;
+    }
+}
+#text-holder{
+    position: relative;
+  /* background-color: red; */
+  padding: 10px;
+  top: 40%;
+  width: 50vw;
+  margin: auto;
+  animation: fade-in-bottom-right 2s ease-out 0s 1 ;
+    
+  
+    
+}
+@keyframes fade-in-bottom-right{
+from{
+opacity: 0;
+transform: scale(1.5);
+}
+to{
+opacity: 1;
+transform: scale(1);
+
+}
+}
+
+
+#projects{
+    background-color: #16171b;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 10vh;
+}
+.project-tile{
+    position: relative;
+    /* height: 40vw; */
+    width: 40vw;
+    background-color: rgb(255, 255, 255);
+    border: 10px solid #637074;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    height: auto;
+    box-shadow: 0 0 16px 3px black;
+
+}
+
+
+.project-tile::before{
+    content: "";
+    position: absolute;
+    background-color: rgb(240, 240, 240);
+    height: 5vh;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    color: #16171b;
+    font-size: 1.5em;
+    text-decoration: underline;
+    
+}
+.project-tile:nth-child(1)::before{
+    content: "PRODUCT LANDING PAGE";
+   
+}
+.project-tile:nth-child(2)::before{
+    content: "TECHNICAL DOCUMENTATION PAGE";
+    
+}
+.project-tile:nth-child(3)::before{
+    content: "CALCULATOR";
+    
+}
+.project-tile:nth-child(4)::before{
+    content:"TRIBUTE PAGE";
+    
+}
+.project-tile:nth-child(5)::before{
+    content:"MY FIRST WEBPAGE";
+    
+}
+article a{
+    position: absolute;
+    background-color: aqua;
+    display: block;
+    width: 100%;
+    height: 5vh;
+    bottom: 0vh;
+    opacity: 0;
+
+}
+
+@media screen and (max-width: 800px){
+    .project-tile::before{
+        height: 2.5vh;
+        font-size: 0.8em;
+        overflow: hidden;
+    }
+}
+
+
+@media screen and (max-width: 750px){
+img{
+    margin-bottom: 20px;
+}
+#text-holder{
+    width: 80vw;
+}
+.project-tile{
+    width: 95vw;
+    overflow: hidden;
+}
+.project-tile::before{
+    height: 2.5vh;
+    font-size: 1em;
+}
+
+li a{
+    font-size: 10px;
+}
+#navbar ul{
+    right: 10px;
+}
+
+
+}
